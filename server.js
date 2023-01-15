@@ -20,7 +20,7 @@ const PORT = process.env.PORT || 5000;
 const DB = process.env.DATABASE;
 
 const corsConfig = {
-  origin: 'http://localhost:3000/',
+  origin: 'http://localhost:3000',
   credentials: true,
 };
 app.use(cors(corsConfig));
@@ -51,7 +51,7 @@ app.use((req, res, next) => {
 app.use('/api/v1/products', productRouter);
 
 app.use((req, res, next) => {
-  res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000/');
+  res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
   res.setHeader('Access-Control-Allow-Credentials', true);
   res.setHeader(
     'Access-Control-Allow-Headers',
